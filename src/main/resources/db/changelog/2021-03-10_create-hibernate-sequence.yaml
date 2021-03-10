@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - sequenceExists:
+                sequenceName: hibernate_sequence
+      author: andreas
+      id: 1609816205451-11
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            sequenceName: hibernate_sequence
+            startValue: 1

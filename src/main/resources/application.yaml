@@ -1,0 +1,16 @@
+quarkus:
+  datasource:
+    db-kind: h2
+    jdbc:
+      url: jdbc:h2:mem:taDB;MODE=PostgreSQL
+      driver: org.h2.Driver
+    username: quarkus
+    password: quarkus
+  hibernate-orm:
+    database:
+      generation: none
+    log:
+      sql: true
+  liquibase:
+    migrate-at-start: true
+    change-log: db/changeLog.yaml

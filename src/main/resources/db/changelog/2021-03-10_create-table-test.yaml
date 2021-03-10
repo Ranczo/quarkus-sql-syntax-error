@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      author: andreas
+      id: 1
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: test_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: from
+                  type: TIMESTAMP WITHOUT TIME ZONE
+            tableName: test

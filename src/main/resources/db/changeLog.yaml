@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: /db/changelog/2021-03-10_create-hibernate-sequence.yaml
+  - include:
+      file: /db/changelog/2021-03-10_create-table-test.yaml
